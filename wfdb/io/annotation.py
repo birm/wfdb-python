@@ -1622,7 +1622,7 @@ def field2bytes(field, value, custom_labels=None):
     # allow use of custom labels
     label_table = ann_label_table
     if custom_labels is not None:
-        label_table = pd.concat([label_table, custom_labels], ignore_index=True)
+        label_table = pd.concat([custom_labels, label_table], ignore_index=True)
 
     # samp and sym bytes come together
     if field == "samptype":
